@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
 
 function App() {
+  const [count, setCount] = useState(0)
+
+  const clickBtn = (ele, i) => {
+    console.log(ele, i)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" onClick={() => setCount(count + 1)}>
+      { count }
+      { [1, 2, 3, 4].map((ele, index) => 
+        <div style={{ margin: '10px' }} key={index} onClick={(ele, index) => {clickBtn(ele, index)}}>{ele}</div>
+      )}
     </div>
   );
 }
