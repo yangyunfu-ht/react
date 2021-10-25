@@ -1,20 +1,31 @@
-import { useState } from 'react'
+// function App() {
+//   console.log(this)
 
-function App() {
-  const [count, setCount] = useState(0)
+//   const onChange = (event) => {
+//     console.log(event)
+//   }
 
-  const clickBtn = (ele, i) => {
-    console.log(ele, i)
+//   return (
+//     <div className='App'>
+//       <input type="checkbox" onChange={onChange}/>
+//     </div>
+//   );
+// } 
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  render () {
+    console.log(this)
+
+    this.state = {
+      name: 'yyf'
+    }
+    return <h1>
+      <p>111</p>
+      {/* <p>111---</p> */}
+    </h1>
   }
-
-  return (
-    <div className="App" onClick={() => setCount(count + 1)}>
-      { count }
-      { [1, 2, 3, 4].map((ele, index) => 
-        <div style={{ margin: '10px' }} key={index} onClick={(ele, index) => {clickBtn(ele, index)}}>{ele}</div>
-      )}
-    </div>
-  );
 }
 
 export default App;

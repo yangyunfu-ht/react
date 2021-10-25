@@ -12,3 +12,20 @@ code {
     monospace;
 }
 
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App li {
+  margin: 20px;
+  background-color: #f5f5f5;
+  width: 30vw;
+  padding: 20px 0;
+  text-align: center;
+  list-style: none;
+}
